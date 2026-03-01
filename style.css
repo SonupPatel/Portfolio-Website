@@ -42,8 +42,8 @@ ul {
     list-style: none;
 }
   .profile-img{
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -329,3 +329,4 @@ section {
     color: var(--gray-color);
     font-weight: 600;
 }
+
