@@ -41,7 +41,14 @@ a {
 ul {
     list-style: none;
 }
-  .profile-img{
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Profile Image */
+.profile-img {
     width: 320px;
     height: 320px;
     object-fit: cover;
@@ -70,10 +77,6 @@ ul {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary-color);
-}
-
-.logo span {
-    color: var(--dark-color);
 }
 
 .nav-links {
@@ -143,7 +146,6 @@ ul {
     gap: 15px;
     margin-bottom: 30px;
     flex-wrap: wrap;
-}
 }
 
 .btn {
@@ -277,6 +279,7 @@ section {
     font-weight: 500;
 }
 
+/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -304,8 +307,72 @@ section {
     margin-bottom: 15px;
 }
 
+.skill-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
 
-/* Experience Section (Fixed Syntax) */
+/* Experience Section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.experience-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.exp-date {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.experience-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.experience-card h4 {
+    font-size: 16px;
+    color: var(--gray-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.exp-location {
+    font-size: 14px;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+}
+
+.experience-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.experience-card li {
+    color: var(--gray-color);
+    margin-bottom: 8px;
+}
+
+/* Education Section */
 .education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -319,11 +386,30 @@ section {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .edu-icon {
     font-size: 30px;
     color: var(--primary-color);
+}
+
+.edu-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.edu-content h4 {
+    font-size: 16px;
+    color: var(--gray-color);
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .edu-date {
@@ -332,3 +418,144 @@ section {
     font-weight: 600;
 }
 
+.edu-content p {
+    color: var(--gray-color);
+    font-size: 14px;
+}
+
+/* Contact Section */
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item i {
+    font-size: 30px;
+    color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: var(--gray-color);
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.contact-social a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    font-size: 24px;
+}
+
+.contact-social a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .image-placeholder {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
